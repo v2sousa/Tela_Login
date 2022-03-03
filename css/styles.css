@@ -1,11 +1,77 @@
 body{
     background-color: #f8f8f8;
 }
-/* Formulario */
+/* Formulario (Configurações desktop)*/
 #form-container{
     background-color: #fff;
     border-radius: 20px;
     box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
     margin: 25px auto;
     padding: 25px;
+}
+@media (min-width:768px) { /*media-query, gerando resposividade para telas maiores*/
+    #form-container {
+        margin: 50px auto;
+        padding: 50px;
+    }
+}
+#form-container{
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+#form-container{
+    color: #222;
+    transition: .5s;
+}
+#form-container a:hover{
+    color: #6c63ff;
+}
+#form-container form{
+    padding-bottom: 0px;
+}
+#form-container .form-control{
+    border: none; /* Retira a borda */
+    border-bottom: 1px solid #ccc;
+    border-radius: 0; /* Retira a border-radius */
+}
+#form-container .form-control:focus{
+    box-shadow: none; /* Retira a borda de focus do elemento */
+}
+#form-container .form-floating label{
+    color: #ccc; /* Altera a label flutuante, caso para mais claro */
+}
+#form-container .form-floating > .form-control:focus~label {
+    color: #222; /* Altera a label flutuante, nesse caso p/ mais escura */
+}
+#form-container input [ type = "submit" ],
+#form-container input [ type = "checkbox" ]:checked {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+.btn.btn-primary{
+    width: 100%;
+    margin-top: 25px;
+}
+@media (min-width: 768px) {
+    .btn.btn-primary{
+        width: auto;
+    }
+}
+/* IMAGEM */
+.row.align-items-center{
+    align-content: center;
+    height: 100%;
+    padding: 75px 0;
+}
+.col-md-6.order-md-1{
+    padding-top: 50px;
+}
+@media (min-width: 768px) {
+    .col-md-6.order-md-1{
+        padding: top 0px;
+    }
+}
+#link-container {
+    text-align: center;
+    padding: 50px;
 }
